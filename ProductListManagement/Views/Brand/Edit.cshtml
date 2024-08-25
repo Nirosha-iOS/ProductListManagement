@@ -3,42 +3,97 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-uppercase text-center"> Edit Brand</h1>
+            <h1 class="text-uppercase text-center">Edit Brand</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-md-8 border-1 border">
             <form method="post" enctype="multipart/form-data">
+                <!-- Name -->
                 <div class="mb-3">
                     <label asp-for="Name" class="form-label"></label>
                     <input asp-for="Name" class="form-control" autocomplete="on" />
-                    <span asp-validation-for="@Model.Name" class="text-danger"> </span>
+                    <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
+
+                <!-- Established Year -->
                 <div class="mb-3">
                     <label asp-for="EstablisedYear" class="form-label"></label>
                     <input asp-for="EstablisedYear" type="number" class="form-control" min="1900" max="@DateTime.Now.Year" step="1" placeholder="YYYY" />
-                    <span asp-validation-for="@Model.EstablisedYear" class="text-danger"> </span>
+                    <span asp-validation-for="EstablisedYear" class="text-danger"></span>
                 </div>
 
+                <!-- Brand Logo -->
                 <div class="mb-3">
                     <label asp-for="BrandLogo" class="form-label"></label>
                     <input type="file" asp-for="BrandLogo" class="form-control" autocomplete="off" />
                 </div>
+
+                <!-- Headquarters -->
+                <div class="mb-3">
+                    <label asp-for="Headquarters" class="form-label"></label>
+                    <input asp-for="Headquarters" class="form-control" />
+                    <span asp-validation-for="Headquarters" class="text-danger"></span>
+                </div>
+
+                <!-- Founder -->
+                <div class="mb-3">
+                    <label asp-for="Founder" class="form-label"></label>
+                    <input asp-for="Founder" class="form-control" />
+                    <span asp-validation-for="Founder" class="text-danger"></span>
+                </div>
+
+                <!-- CEO -->
+                <div class="mb-3">
+                    <label asp-for="CEO" class="form-label"></label>
+                    <input asp-for="CEO" class="form-control" />
+                    <span asp-validation-for="CEO" class="text-danger"></span>
+                </div>
+
+                <!-- Industry -->
+                <div class="mb-3">
+                    <label asp-for="Industry" class="form-label"></label>
+                    <input asp-for="Industry" class="form-control" />
+                    <span asp-validation-for="Industry" class="text-danger"></span>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label"></label>
+                    <textarea asp-for="Description" class="form-control"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <!-- Website URL -->
+                <div class="mb-3">
+                    <label asp-for="WebsiteURL" class="form-label"></label>
+                    <input asp-for="WebsiteURL" class="form-control" type="url" />
+                    <span asp-validation-for="WebsiteURL" class="text-danger"></span>
+                </div>
+
+                <!-- Parent Company -->
+                <div class="mb-3">
+                    <label asp-for="ParentCompany" class="form-label"></label>
+                    <input asp-for="ParentCompany" class="form-control" />
+                    <span asp-validation-for="ParentCompany" class="text-danger"></span>
+                </div>
+
+                <!-- Buttons -->
                 <div class="mb-3">
                     <a asp-controller="Brand" asp-action="Index" class="btn btn-danger">Back</a>
                     <button type="submit" class="btn btn-warning">Update</button>
                 </div>
-                
             </form>
         </div>
         <div class="col-md-4">
-            @if(Model.BrandLogo != null)
+            @if (Model.BrandLogo != null)
             {
-                <img src="@Url.Content(Model.BrandLogo)" width="100%" />
+                <img src="@Url.Content(Model.BrandLogo)" width="100%" alt="Brand Logo" />
             }
         </div>
     </div>
 </div>
+
 @section Scripts {
     <partial name="_validationScriptsPartial" />
 }

@@ -7,40 +7,92 @@
         </div>
         <div class="card-body">
             <div class="row">
-
-           
                 <div class="col-md-8">
                     <div class="row">
-                
                         <div class="col-md-4">
-                            <p class="card-text text-uppercase"><strong>Id</strong> </p>
+                            <p class="card-text text-uppercase"><strong>Id</strong></p>
                         </div>
                         <div class="col-md-8">
-                            <p class="card-text">:@Model.Id</p>
+                            <p class="card-text">@Model.Id</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4">
-                            <p class="card-text text-uppercase"><strong>Name</strong> </p>
+                        <div class="col-md-4 my-3">
+                            <p class="card-text text-uppercase"><strong>Name</strong></p>
                         </div>
-                        <div class="col-md-8">
-                            <p class="card-text">:@Model.Name</p>
+                        <div class="col-md-8 my-3">
+                            <p class="card-text">@Model.Name</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4">
-                            <p class="card-text text-uppercase"><strong>EstablishedYear</strong> </p>
+                        <div class="col-md-4 my-3">
+                            <p class="card-text text-uppercase"><strong>Established Year</strong></p>
                         </div>
-                        <div class="col-md-8">
-                            <p class="card-text">:@Model.EstablisedYear</p>
+                        <div class="col-md-8 my-3">
+                            <p class="card-text">@Model.EstablisedYear</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 my-3">
+                            <p class="card-text text-uppercase"><strong>CEO</strong></p>
+                        </div>
+                        <div class="col-md-8 my-3">
+                            <p class="card-text">@Model.CEO</p>
+                        </div>
+                    </div>
+                    <!-- Add more fields as required -->
+                    <div class="row">
+                        <div class="col-md-4 my-3">
+                            <p class="card-text text-uppercase"><strong>Headquarters</strong></p>
+                        </div>
+                        <div class="col-md-8 my-3">
+                            <p class="card-text">@Model.Headquarters</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 my-3">
+                            <p class="card-text text-uppercase"><strong>Founder</strong></p>
+                        </div>
+                        <div class="col-md-8 my-3">
+                            <p class="card-text">@Model.Founder</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 my-3">
+                            <p class="card-text text-uppercase"><strong>Industry</strong></p>
+                        </div>
+                        <div class="col-md-8 my-3">
+                            <p class="card-text">@Model.Industry</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 my-3">
+                            <p class="card-text text-uppercase"><strong>Description</strong></p>
+                        </div>
+                        <div class="col-md-8 my-3">
+                            <p class="card-text">@Model.Description</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 my-3">
+                            <p class="card-text text-uppercase"><strong>Website URL</strong></p>
+                        </div>
+                        <div class="col-md-8 my-3">
+                            <p class="card-text">@Model.WebsiteURL</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 my-3">
+                            <p class="card-text text-uppercase"><strong>Parent Company</strong></p>
+                        </div>
+                        <div class="col-md-8 my-3">
+                            <p class="card-text">@Model.ParentCompany</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                   
-                    <img src="@Url.Content(Model.BrandLogo)" width="100%" />
+                    <img src="@Url.Content(Model.BrandLogo)" width="100%" alt="Brand Logo" />
                 </div>
-
             </div>
             <div class="row pt-3">
                 <div class="col-md-12 text-start">

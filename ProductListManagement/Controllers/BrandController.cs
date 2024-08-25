@@ -114,6 +114,13 @@ namespace ProductListManagement.Controllers
                 var objectFromDB = _dbContext.Brands.AsNoTracking().FirstOrDefault(x => x.Id == brand.Id);
                 objectFromDB.Name = brand.Name;
                 objectFromDB.EstablisedYear = brand.EstablisedYear;
+                objectFromDB.Headquarters = brand.Headquarters;
+                objectFromDB.Founder = brand.Founder;
+                objectFromDB.CEO = brand.CEO;
+                objectFromDB.Industry = brand.Industry;
+                objectFromDB.Description = brand.Description;
+                objectFromDB.WebsiteURL = brand.WebsiteURL;
+                objectFromDB.ParentCompany = brand.ParentCompany;
                 if (brand.BrandLogo != null)
                 {
                     objectFromDB.BrandLogo = brand.BrandLogo;
